@@ -14,7 +14,7 @@ function WorkPosition(props: workPositionProps): React.ReactElement {
                 <p>{props.heading}</p>
             </div>
             <div className='left-side'>
-                <p>{dates}</p>
+                <p>{props.dates}</p>
             </div>
         </>
     );

@@ -37,7 +37,7 @@ function Contact(): React.ReactElement {
                     <p>© Samuel Chan 2025</p>
                 </div>
                 <div>
-                    &lt;/&rt; Code is not public but my process is documented here
+                    &lt;/&gt; Code is not public but my process is documented here
                 </div>
             </div>
         </footer>
