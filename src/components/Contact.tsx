@@ -3,41 +3,43 @@ import React from "react";
 function Contact(): React.ReactElement {
     return(
         <footer>
-            <div className='grid'>
-                <h1 className='left-panel'>Contact</h1>
-                <div className='right-panel'>
-                    <p>Samuel Chan</p>
-                    <p>samch000 [at] cs [dot] washington [dot] edu</p>
-                    <p className='link'>UW Honors Portfolio</p>
+            <div>
+                <div className='panel'>
+                    <h2 className='left-panel'>&lt;Contact&gt;</h2>
+                    <div className='right-panel'>
+                        <p>Samuel Chan</p>
+                        <p>samch000 [at] cs [dot] washington [dot] edu</p>
+                        <p className='link'>UW Honors Portfolio</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className='grid'>
-                <h1 className='left-panel'>Mailing List</h1>
-                <div className='right-panel'>
-                    <p>Want to hear my semi-seasonal updates?</p>
-                    <p>Join the mailing (wait)list <p className='link'>here</p></p>
+                <div className='panel'>
+                    <h2 className='left-panel'>&lt;Mailing List&gt;</h2>
+                    <div className='right-panel'>
+                        <p>Want to hear my semi-seasonal updates?</p>
+                        <p>Join the mailing (wait)list <a href='https://google.com'>here</a></p>
+                    </div>
                 </div>
-            </div>
 
-            <div className='grid'>
-                <div>
-                    <h1>Photography</h1>
+                <div className='panel'>
+                    <div className='left-panel'>
+                        <h2>&lt;Photography&gt;</h2>
+                    </div>
+                    <div className='right-panel'>
+                        <p>Dark Forest Photo</p>
+                        <p>@<a href='https://www.instagram.com/darkforestphoto/'>darkforestphoto</a></p>
+                        <p>message me on instagram for inquiries & shoots</p>
+                    </div>
                 </div>
-                <div className='right-panel'>
-                    <p>Dark Forest Photo</p>
-                    <p>@<p className='link'>darkforestphoto</p></p>
-                    <p>message me on instagram for inquiries & shoots</p>
-                </div>
-            </div>
 
-            <div className='grid'>
-                <div className='left-panel'>
-                    <p>designed, developed, and implemented by</p>
-                    <p>© Samuel Chan 2025</p>
-                </div>
-                <div>
-                    &lt;/&gt; Code is not public but my process is documented here
+                <div className='panel'>
+                    <div className='left-panel'>
+                        <p>designed, developed, and implemented by</p>
+                        <p>© Samuel Chan 2025</p>
+                    </div>
+                    <div className="right-panel">
+                        &lt;/&gt; MIT License
+                    </div>
                 </div>
             </div>
         </footer>

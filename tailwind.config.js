@@ -1,10 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        page: '#252525',
+        nav: '#121212',
+        accent: '#2596be',
+      },
+
+      fontFamily: {
+        header: ['"Fira Code"', 'monospace'],
+        body: ['"Inter"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

@@ -9,15 +9,17 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div>
+    <>
       <NameHeader />
-      <Home />
-      <About />
-      <CSProjects />
-      <Experience />
-      <Contact />
-    </div>
-  );
+      <div>
+        <Home />
+        <About />
+        <CSProjects />
+        <Experience />
+        <Contact />
+      </div>
+    </>
+    );
 }
 
 export default App;
