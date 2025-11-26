@@ -72,7 +72,7 @@
         @apply p-0
     }
 
-    .para {
+    .comment {
         @apply text-justify
     }
 }
