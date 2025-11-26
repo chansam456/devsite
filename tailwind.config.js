@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        page: '#252525',
-        nav: '#121212',
-        accent: '#2596be',
+        background: '#0d1117',
+        accentblue: '#58a6ff',
+        accentgreen: '',
       },
 
       fontFamily: {
-        header: ['"Fira Code"', 'monospace'],
-        body: ['"Inter"', 'sans-serif'],
+        main: ['"JetBrains Mono"', 'monospace'],
+        links: ['"Space Mono"', 'monospace'],
       },
     },
   },

@@ -6,75 +6,10 @@
 
 @layer base {
 
-    header {
-        @apply top-6 fixed flex bg-nav font-thin inset-x-[11rem] items-center rounded-xl
-    }
-
-    header > a {
-        @apply px-4 py-4
-    }
-
-    header > a:first-of-type {
-        @apply font-header text-2xl px-8 mr-auto
-    }
-
-    header > a:last-of-type {
-        @apply pr-8
-    }
-    
-    body {
-        @apply bg-page text-gray-200 font-body
-    }
-
-    body > div {
-        @apply h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth
-    }
-
-    h1 {
-        @apply font-header text-6xl;
-    }
-
-    h2 {
-        @apply font-header text-4xl;
-    }
-
-    p {
-        @apply font-body text-sm leading-5 py-4;
-    }
-    
-    img {
-        @apply w-[40vw] h-auto hover:scale-105 transform transition-transform duration-500 hover:rotate-2 ease-in-out;
-    }
-
-    footer > div {
-        @apply mx-[11rem] bg-nav rounded-xl py-2
-    }
 }
 
 @layer components {
-    .panel {
-        @apply flex justify-center items-center h-screen px-[11rem] snap-start
-    }
 
-    footer .panel {
-        @apply flex justify-center items-start h-auto px-[0rem]
-    }
-
-    .left-panel {
-        @apply w-1/2 p-4;
-    }
-
-    .right-panel {
-        @apply w-1/2 p-4;
-    }
-
-    footer p {
-        @apply p-0
-    }
-
-    .comment {
-        @apply text-justify
-    }
 }
 
 @layer utilities {
