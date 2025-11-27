@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Welcome to my (Dev)site!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies
 
-## Available Scripts
+React (Create React App)
+Tailwind CSS (lots of pain, I know)
 
-In the project directory, you can run:
+## Planned Integrations + Features
+
+More Animations
+Project Updates
+Photography Branch Site
+Color Groups
+Accessibility
 
 ### `npm start`
 
