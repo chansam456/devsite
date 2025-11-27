@@ -60,7 +60,15 @@
     }
 
     .footbar {
-        @apply flex border-t border-solid justify-between px-[20px] py-[8px] text-[12pt]
+        @apply flex border-t border-solid justify-between px-5 py-2 text-[12px] fixed bottom-0 w-full
+    }
+
+    .footbar-options {
+        @apply flex gap-5 mx-5
+    }
+
+    .footbar-info {
+        @apply flex gap-5 mx-5
     }
 
     .project-list {
