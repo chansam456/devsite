@@ -1,15 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    * {
+        @apply p-0 m-0 border-textdark bg-background
+    }
 
+    body {
+        @apply font-main text-textdark h-full flex-col
+    }
+
+    h1 {
+        @apply text-bright text-[4rem] font-bold mb-[15px] uppercase tracking-[-1px] leading-tight
+    }
+
+    a {
+        @apply text-center transition-colors duration-300
+    }
+    
+    a:hover {
+        @apply text-accentgreen
+    }
 }
 
 @layer components {
+    .main {
+        @apply py-14 px-5 max-w-[900px] w-full overflow-y-auto flex-grow mx-auto
+    }
 
+    .about {
+        @apply my-[60px]
+    }
+
+    .cmd {
+        @apply mb-[8px] text-[16px] text-accentblue
+    }
+
+    .bio {
+        @apply text-[1.1rem] leading-[1.6] w-auto
+    }
+    
+    .hotbar {
+        @apply flex border-b border-solid justify-between px-5 py-3 text-[14px] fixed w-full
+    }
+
+    .hotbar-name {
+        @apply flex-grow text-left mx-5 transition-colors duration-200
+    }
+
+    .hotbar-name:hover {
+        @apply text-textlight
+    }
+
+    .links {
+        @apply flex gap-5 mx-5
+    }
+
+    .footbar {
+        @apply flex border-t border-solid justify-between px-[20px] py-[8px] text-[12pt]
+    }
+
+    .project-list {
+        @apply flex flex-col gap-5
+    }
+
+    .date {
+        @apply text-accentblue
+    }
+
+    .project-entry {
+        @apply border border-solid p-6 transition duration-300 ease-in-out
+    }
+
+    .project-entry:hover {
+        @apply border-accentblue -translate-y-0.5 shadow-lg shadow-black/30
+    }
+
+    .project-title {
+        @apply size-6 text-[1.5rem] font-bold text-textlight mb-[10px] flex w-auto
+    }
+
+    .project-title::before {
+        @apply content-['>'] mr-[10px] font-normal text-textlight
+    }
+
+    .project-desc {
+        @apply text-textdark max-w-[90%]
+    }
 }
 
 @layer utilities {

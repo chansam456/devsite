@@ -9,7 +9,11 @@ module.exports = {
       colors: {
         background: '#0d1117',
         accentblue: '#58a6ff',
-        accentgreen: '',
+        accentgreen: '#83F860',
+        accentpink: '#ca054d',
+        textlight: '#e8e6e3', //consider #e0e0e0 (darker) or #f5f5f0 (warm)
+        textdark: '#8b949e',
+        bright: '#ffffff',
       },
 
       fontFamily: {
