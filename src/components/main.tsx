@@ -14,26 +14,31 @@ export default function Main(): React.ReactElement {
 
             <div className='project-list'>
                 <div className='project-entry'>
+                    <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project One</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
                 </div>
 
                 <div className='project-entry'>
+                    <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project Two</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
                 </div>
 
                 <div className='project-entry'>
+                    <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project Three</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
                 </div>
 
                 <div className='project-entry'>
+                    <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project Four</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
                 </div>
 
                 <div className='project-entry'>
+                    <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project Five</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
                 </div>

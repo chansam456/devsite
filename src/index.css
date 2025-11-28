@@ -68,7 +68,7 @@
     }
 
     .footbar-info {
-        @apply flex gap-5 mx-5
+        @apply flex gap-5 mx-3
     }
 
     .project-list {
@@ -87,8 +87,12 @@
         @apply border-accentblue -translate-y-0.5 shadow-lg shadow-black/30
     }
 
+    .project-date {
+        @apply text-accentblue mb-1
+    }
+
     .project-title {
-        @apply size-6 text-[1.5rem] font-bold text-textlight mb-[10px] flex w-auto
+        @apply h-6 w-auto text-[1.5rem] font-bold text-textlight mb-6 flex
     }
 
     .project-title::before {
@@ -97,6 +101,30 @@
 
     .project-desc {
         @apply text-textdark max-w-[90%]
+    }
+
+    .contact-entry {
+        @apply flex mb-5 items-stretch
+    }
+
+    .contact {
+        @apply pt-5 pb-20
+    }
+
+    .contact-title {
+        @apply w-[50%] text-2xl font-bold text-textlight mb-6
+    }
+
+    .contact-desc {
+        @apply w-[50%] text-textdark
+    }
+
+    .copyright-title {
+        @apply w-[50%] text-base font-normal text-textlight
+    }
+
+    .copyright-desc {
+        @apply w-[50%] text-textdark
     }
 }
 
