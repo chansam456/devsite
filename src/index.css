@@ -6,11 +6,11 @@
 
 @layer base {
     * {
-        @apply p-0 m-0 border-normal-textdark dark:border-solar-textdark bg-normal-background dark:bg-solar-background
+        @apply p-0 m-0 border-normal-textdark dark:border-solar-textdark
     }
 
     body {
-        @apply font-main text-normal-textdark dark:text-solar-textdark h-full flex-col 
+        @apply font-main text-normal-textdark dark:text-solar-textdark h-full flex-col bg-normal-background dark:bg-solar-background
     }
 
     h1 {
@@ -71,7 +71,7 @@
     }
 
     .footbar-info {
-        @apply flex gap-5 mx-3
+        @apply flex gap-5 mx-3 bg-transparent
     }
 
     .project-list {
