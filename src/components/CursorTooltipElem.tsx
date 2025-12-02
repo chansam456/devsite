@@ -7,7 +7,7 @@ interface TooltipProps {
     className: string
 }
 
-export default function CursorTooltip({ text, children, className }: TooltipProps): React.ReactElement {
+export default function CursorTooltipElem({ text, children, className }: TooltipProps): React.ReactElement {
     const [isVisible, setIsVisible] = React.useState(false);
     const [coords, setCoords] = React.useState({ x: 0, y: 0 });
     //const [quadrant, setQuadrant] = React.useState({ x: 'left', y: 'top'});

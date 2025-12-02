@@ -107,7 +107,7 @@
     }
 
     .tooltipInnerContainer {
-        @apply border py-1 px-5 rounded-md bg-normal-background/50 dark:bg-solar-background/50
+        @apply border py-1 px-5 rounded-md bg-normal-background/50 dark:bg-solar-background/50 text-normal-textlight dark:text-solar-textlight
     }
 
     .contact-entry {
