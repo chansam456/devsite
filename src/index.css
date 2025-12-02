@@ -6,15 +6,15 @@
 
 @layer base {
     * {
-        @apply p-0 m-0 border-textdark bg-background
+        @apply p-0 m-0 border-normal-textdark dark:border-solar-textdark bg-normal-background dark:bg-solar-background
     }
 
     body {
-        @apply font-main text-textdark h-full flex-col
+        @apply font-main text-normal-textdark dark:text-solar-textdark h-full flex-col 
     }
 
     h1 {
-        @apply text-bright text-[4rem] font-bold mb-[15px] uppercase tracking-[-1px] leading-tight
+        @apply text-normal-bright dark:text-solar-bright text-[4rem] font-bold mb-[15px] uppercase tracking-[-1px] leading-tight
     }
 
     a {
@@ -22,7 +22,7 @@
     }
     
     a:hover {
-        @apply text-accentgreen
+        @apply text-normal-accentgreen dark:text-solar-accentpink
     }
 }
 
@@ -36,7 +36,7 @@
     }
 
     .cmd {
-        @apply mb-[8px] text-[16px] text-accentblue
+        @apply mb-[8px] text-[16px] text-normal-accentblue dark:text-solar-accentpink
     }
 
     .bio {
@@ -44,27 +44,30 @@
     }
     
     .hotbar {
-        @apply flex border-b border-solid justify-between px-5 py-3 text-[14px] fixed w-full
+        @apply flex border-b border-solid justify-between px-5 py-3 text-[14px] fixed w-full bg-normal-background/50 dark:bg-solar-background/50
     }
 
     .hotbar-name {
-        @apply flex-grow text-left mx-5 transition-colors duration-200
+        @apply flex-grow text-left mx-5 transition-colors duration-200 bg-transparent
     }
 
     .hotbar-name:hover {
-        @apply text-textlight
+        @apply text-normal-textlight dark:text-solar-textlight
     }
 
     .links {
-        @apply flex gap-5 mx-5
+        @apply flex gap-5 mx-5 bg-transparent
     }
 
     .footbar {
-        @apply flex border-t border-solid justify-between px-5 py-2 text-[12px] fixed bottom-0 w-full
+        @apply flex border-t border-solid justify-between px-5 py-2 text-[12px] fixed bottom-0 w-full bg-normal-background/50 dark:bg-solar-background/50
     }
 
     .footbar-options {
-        @apply flex gap-5 mx-5
+        @apply flex gap-5 mx-5 bg-transparent
+    }
+    button:hover {
+        @apply text-normal-textlight dark:text-solar-textlight
     }
 
     .footbar-info {
@@ -76,7 +79,7 @@
     }
 
     .date {
-        @apply text-accentblue
+        @apply text-normal-accentblue dark:text-solar-accentpink
     }
 
     .project-entry {
@@ -84,23 +87,23 @@
     }
 
     .project-entry:hover {
-        @apply border-accentblue -translate-y-0.5 shadow-lg shadow-black/30
+        @apply border-normal-accentblue dark:border-solar-accentpink -translate-y-0.5 shadow-lg shadow-black/30 dark:shadow-white/30
     }
 
     .project-date {
-        @apply text-accentblue mb-1
+        @apply text-normal-accentblue dark:text-solar-accentpink mb-1
     }
 
     .project-title {
-        @apply h-6 w-auto text-[1.5rem] font-bold text-textlight mb-6 flex
+        @apply h-6 w-auto text-[1.5rem] font-bold text-normal-textlight dark:text-solar-textlight mb-6 flex
     }
 
     .project-title::before {
-        @apply content-['>'] mr-[10px] font-normal text-textlight
+        @apply content-['>'] mr-[10px] font-normal text-normal-textlight dark:text-solar-textlight
     }
 
     .project-desc {
-        @apply text-textdark max-w-[90%]
+        @apply text-normal-textdark dark:text-solar-textdark max-w-[90%]
     }
 
     .contact-entry {
@@ -112,19 +115,19 @@
     }
 
     .contact-title {
-        @apply w-[50%] text-2xl font-bold text-textlight mb-6
+        @apply w-[50%] text-2xl font-bold text-normal-textlight dark:text-solar-textdark mb-6
     }
 
     .contact-desc {
-        @apply w-[50%] text-textdark
+        @apply w-[50%] text-normal-textdark dark:text-solar-textdark
     }
 
     .copyright-title {
-        @apply w-[50%] text-base font-normal text-textlight
+        @apply w-[50%] text-base font-normal text-normal-textlight dark:text-solar-textlight
     }
 
     .copyright-desc {
-        @apply w-[50%] text-textdark
+        @apply w-[50%] text-normal-textdark dark:text-solar-textdark
     }
 }
 

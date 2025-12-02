@@ -27,7 +27,8 @@ const useLocalStorage = (key: string, initialValue: boolean) => {
 };
 
 const useDarkMode = () => {
-  const [enabled, setEnabled] = useLocalStorage('dark-theme', true);
+  const systemThemePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [enabled, setEnabled] = useLocalStorage('dark-theme', systemThemePreference);
   const isEnabled = enabled;
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const useDarkMode = () => {
     const bodyClass = window.document.body.classList;
 
     isEnabled ? bodyClass.add(className) : bodyClass.remove(className);
-  }, [enabled, isEnabled]);
+  }, [isEnabled]);
 
   return [enabled, setEnabled];
 };
