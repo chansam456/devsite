@@ -1,4 +1,5 @@
 import React from 'react';
+import CursorTooltip from './CursorTooltip';
 
 export default function Main(): React.ReactElement {
     return (
@@ -13,11 +14,11 @@ export default function Main(): React.ReactElement {
             </div>
 
             <div className='project-list'>
-                <div className='project-entry'>
+                <CursorTooltip text='Hi this is my project!' className='project-entry'>
                     <div className='project-date'>September 2025</div>
                     <div className='project-title'>Project One</div>
                     <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
-                </div>
+                </CursorTooltip>
 
                 <div className='project-entry'>
                     <div className='project-date'>September 2025</div>

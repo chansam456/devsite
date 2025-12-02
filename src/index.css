@@ -83,7 +83,7 @@
     }
 
     .project-entry {
-        @apply border border-solid p-6 transition duration-300 ease-in-out
+        @apply border border-solid p-6 transition duration-300 ease-in-out flex-col
     }
 
     .project-entry:hover {

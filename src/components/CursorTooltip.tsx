@@ -3,9 +3,10 @@ import React from 'react';
 interface TooltipProps {
     text: string;
     children: React.ReactNode;
+    className: string
 }
 
-export default function CursorTooltip({ text, children }: TooltipProps): React.ReactElement {
+export default function CursorTooltip({ text, children, className }: TooltipProps): React.ReactElement {
     const [isVisible, setIsVisible] = React.useState(false);
     const [coords, setCoords] = React.useState({ x: 0, y: 0 });
     //const [quadrant, setQuadrant] = React.useState({ x: 'left', y: 'top'});
@@ -22,7 +23,7 @@ export default function CursorTooltip({ text, children }: TooltipProps): React.R
     };
 
     return(
-        <div className='tooltipOuterContainer inline-flex'
+        <div className={`tooltipOuterContainer inline-flex ${className || ''}`}
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
         onMouseMove={handleMouseMove}>
