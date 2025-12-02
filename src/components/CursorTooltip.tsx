@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 interface TooltipProps {
     text: string;
@@ -28,14 +29,17 @@ export default function CursorTooltip({ text, children, className }: TooltipProp
         onMouseLeave={() => setIsVisible(false)}
         onMouseMove={handleMouseMove}>
             {children}
-            {isVisible && (<div className='tooltipInnerContainer fixed z-[500] pointer-events-none' 
+            {isVisible && ReactDOM.createPortal(
+            <div className='tooltipInnerContainer fixed z-[1500] pointer-events-none w-fit' 
             style={{
                 // positioning the tooltip @ cursor location
-                left: coords.x,
-                top: coords.y
+                left: coords.x + 10,
+                top: coords.y + 10
             }}>
                 {text}
-            </div>)}
+            </div>,
+            // render direct to body
+            document.body)}
         </div>
     );
 }
