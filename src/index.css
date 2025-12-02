@@ -44,7 +44,7 @@
     }
     
     .hotbar {
-        @apply flex border-b border-solid justify-between px-5 py-3 text-[14px] fixed w-full bg-normal-background/50 dark:bg-solar-background/50
+        @apply z-[999] flex border-b border-solid justify-between px-5 py-3 text-[14px] fixed w-full bg-normal-background/50 dark:bg-solar-background/50
     }
 
     .hotbar-name {
@@ -60,7 +60,7 @@
     }
 
     .footbar {
-        @apply flex border-t border-solid justify-between px-5 py-2 text-[12px] fixed bottom-0 w-full bg-normal-background/50 dark:bg-solar-background/50
+        @apply z-[999] flex border-t border-solid justify-between px-5 py-2 text-[12px] fixed bottom-0 w-full bg-normal-background/50 dark:bg-solar-background/50
     }
 
     .footbar-options {

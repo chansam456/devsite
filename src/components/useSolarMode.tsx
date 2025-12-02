@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+// forked code from Fireship :) with a few additions and simplifications
+// creates a hook that allows the caller to see and modify the light/dark (in my implementation lunar/solar) mode 
+// and store this information in the browser. Grabs initial information from previous visits and system preferences.
 
-// function to check local storage for preference
 const useLocalStorage = (key: string, initialValue: boolean) => { 
   const [storedValue, setStoredValue] = useState(() => {
     try {
@@ -26,7 +28,7 @@ const useLocalStorage = (key: string, initialValue: boolean) => {
   return [storedValue, setValue];
 };
 
-const useDarkMode = () => {
+const useSolarMode = () => {
   const systemThemePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [enabled, setEnabled] = useLocalStorage('dark-theme', systemThemePreference);
   const isEnabled = enabled;
@@ -41,4 +43,4 @@ const useDarkMode = () => {
   return [enabled, setEnabled];
 };
 
-export default useDarkMode;
+export default useSolarMode;
