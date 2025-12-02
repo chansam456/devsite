@@ -9,7 +9,7 @@ export default function Contact(): React.ReactElement {
                     <div className='contact-desc'>
                         Samuel Chan<br/>
                         samch000 [at] cs [dot] uw [dot] edu<br/>
-                        <a href='https://github.com/chansam456/uwhonors'>@UWHonors Portfolio</a>
+                        <a title="(Coming soon...)" href='https://github.com/chansam456'>@UWHonors Portfolio</a>
                     </div>
                 </div>
 
