@@ -10,18 +10,36 @@ interface TooltipProps {
 export default function CursorTooltipElem({ text, children, className }: TooltipProps): React.ReactElement {
     const [isVisible, setIsVisible] = React.useState(false);
     const [coords, setCoords] = React.useState({ x: 0, y: 0 });
-    //const [quadrant, setQuadrant] = React.useState({ x: 'left', y: 'top'});
+
+    const lastCoords = React.useRef({ x: 0, y: 0 }); // performance boosting version
+    const rafRef = React.useRef(0); // request animation frame 
+
+    // deprecated quadrant code:
+    // const [quadrant, setQuadrant] = React.useState({ x: 'left', y: 'top'});
+
+    const updatePosition = () => {
+        setCoords(lastCoords.current);
+        rafRef.current = 0;
+    }
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        const { clientX, clientY } = e;
-        setCoords({x: clientX, y: clientY});
-        
-        //assess quadrant of mouse 
-        //const XQuad = clientX > window.innerWidth / 2 ? 'right' : 'left';
-        //const YQuad = clientY > window.innerHeight / 2 ? 'bottom' : 'top';
+        lastCoords.current = { x: e.clientX, y: e.clientY };
 
-        //setQuadrant({x: XQuad, y: YQuad});
+        if (!rafRef.current) {
+            rafRef.current = requestAnimationFrame(updatePosition);
+        }
+
+        // deprecated quadrant code: 
+        // const XQuad = clientX > window.innerWidth / 2 ? 'right' : 'left';
+        // const YQuad = clientY > window.innerHeight / 2 ? 'bottom' : 'top';
+        // setQuadrant({x: XQuad, y: YQuad});
     };
+
+    React.useEffect(() => {
+        return () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, []);
 
     return(
         <div className={`tooltipOuterContainer inline-flex ${className || ''}`}
