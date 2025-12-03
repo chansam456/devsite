@@ -14,24 +14,22 @@ export default function Main(): React.ReactElement {
             </div>
 
             <div className='project-list'>
-                <CursorTooltipElem text='Hi this is my project!' className='project-entry'>
-                    <div className='project-date'>September 2025 - Present</div>
+                <CursorTooltipElem text='[WIP!] Ask me about it :)' className='project-entry'>
+                    <div className='project-prologue'>Project Manager, Frontend Dev.</div>
                     <div className='project-title'>Husky Coding Project: Studi</div>
                     <div className='project-desc'>Studi unlocks the magic of UW's campus by sorting you into the perfect study spot; the 
-                        spellbinding atmosphere of Suzzallo or a hidden nook, whichever shall matches your vibe. Let our advanced algorithm 
+                        spellbinding atmosphere of Suzzallo or a hidden nook, whichever you shall seek. Let our advanced algorithm 
                         be your Sorting Hat, or use Professor Trewlaney's Crystal Ball to divine your next destination.</div>
+                    <div className='project-stack'>Node.js, React, Tailwind CSS, Supabase</div>
                 </CursorTooltipElem>
 
-                <CursorTooltipElem text='Hi this is my project!' className='project-entry'>
-                    <div className='project-date'>September 2025</div>
-                    <div className='project-title'>Project Two</div>
-                    <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
-                </CursorTooltipElem>
-
-                <CursorTooltipElem text='Hi this is my project!' className='project-entry'>
-                    <div className='project-date'>September 2025</div>
-                    <div className='project-title'>Project Three</div>
-                    <div className='project-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque necessitatibus culpa itaque delectus eveniet obcaecati tempora, nisi optio! Nihil eius minus vitae ducimus ullam fugiat minima odio libero a aut!</div>
+                <CursorTooltipElem text='[WIP!] Click me for Design Docs' className='project-entry'>
+                    <div className='project-prologue'>Designer x Developer</div>
+                    <div className='project-title'>Portfolio:<a className='ml-3' href='https://www.instagram.com/tai.jpeg'>tai.jpeg</a></div>
+                    <div className='project-desc'>From Seattle to the ends of the earth, this portfolio serves as a vibrant passport 
+                        to unfiltered international photography escapades. tai.jpeg captures the vibrance of each and every 
+                        country, city, and journey.</div>
+                    <div className='project-stack'>React, Vercel, Sanity, Scheduling Integrations</div>
                 </CursorTooltipElem>
             </div>
         </div>

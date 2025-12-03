@@ -32,8 +32,8 @@ export default function Contact(): React.ReactElement {
 
                 <div className='contact-entry'>
                     <div className='copyright-title'>
-                        designed, developed, and implemented<br/>
-                        by <a href='https://google.com'>@Samuel Chan 2025 &copy;</a>
+                        a <a href='https://google.com'>@Sam Chan</a> production
+                        &copy; 2025
                     </div>
                     <div className='copyright-desc'>
                         &lt;/&gt; Code, inspiriation, design credits, and implementation

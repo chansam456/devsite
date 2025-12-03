@@ -8,18 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        normal: {
-          background: '#0d1117', //0d1117
+        normal: { //lunar
+          background: '#0d1117',
           accentblue: '#58a6ff',
-          accentgreen: '#83F860',
-          accentpink: '#ca054d',
-          textlight: '#e8e6e3', //consider #e0e0e0 (darker) or #f5f5f0 (warm)
+          accentorange: '#FD5C39',
+          textlight: '#e8e6e3', 
           textdark: '#8b949e',
           bright: '#fff',
         },
         
         solar: {
-          background: '#002b36', //switch to 002b36 if too bright
+          background: '#002b36',
           accentpink: '#e8429c',
           textlight: '#fdf8e8',
           textdark: '#c4ba98',

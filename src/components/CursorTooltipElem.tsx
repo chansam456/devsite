@@ -11,13 +11,10 @@ export default function CursorTooltipElem({ text, children, className }: Tooltip
     const [isVisible, setIsVisible] = React.useState(false);
     const [coords, setCoords] = React.useState({ x: 0, y: 0 });
 
-    const lastCoords = React.useRef({ x: 0, y: 0 }); // performance boosting version
-    const rafRef = React.useRef(0); // request animation frame 
+    const lastCoords = React.useRef({ x: 0, y: 0 });
+    const rafRef = React.useRef(0); // request animation frame (raf)
 
-    // deprecated quadrant code:
-    // const [quadrant, setQuadrant] = React.useState({ x: 'left', y: 'top'});
-
-    const updatePosition = () => {
+    const updatePosition = () => { // update state constantly, but update element every frame
         setCoords(lastCoords.current);
         rafRef.current = 0;
     }
@@ -28,11 +25,6 @@ export default function CursorTooltipElem({ text, children, className }: Tooltip
         if (!rafRef.current) {
             rafRef.current = requestAnimationFrame(updatePosition);
         }
-
-        // deprecated quadrant code: 
-        // const XQuad = clientX > window.innerWidth / 2 ? 'right' : 'left';
-        // const YQuad = clientY > window.innerHeight / 2 ? 'bottom' : 'top';
-        // setQuadrant({x: XQuad, y: YQuad});
     };
 
     React.useEffect(() => {
@@ -51,8 +43,9 @@ export default function CursorTooltipElem({ text, children, className }: Tooltip
             <div className='tooltipInnerContainer fixed z-[1500] pointer-events-none w-fit' 
             style={{
                 // positioning the tooltip @ cursor location
-                left: coords.x + 10,
-                top: coords.y + 10
+                left: coords.x,
+                top: coords.y
+                //transform: translate()
             }}>
                 {text}
             </div>,
