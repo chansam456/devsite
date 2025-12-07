@@ -1,5 +1,5 @@
 import React from 'react';
-import { Canvas, ThreeElement, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { AsciiRenderer } from '@react-three/drei';
 
@@ -15,18 +15,24 @@ const vertexShader_stars = '';
 // --- B2. Fragement Shader ---
 const fragmentShader_stars = ''; 
 
-interface uniformsProp {
+interface UniformsData {
     uniforms: {uTime: {value: number}, uResolution: {value: THREE.Vector2}}
 }
 
-function Moon(uniforms: uniformsProp): React.ReactElement {
+function Moon({uniforms}: UniformsData): React.ReactElement {
     return(
         <>
+            <sphereGeometry args={[5,64,64]}/>
+            <shaderMaterial 
+                vertexShader={vertexShader_moon}
+                fragmentShader={fragmentShader_moon}
+                uniforms={uniforms}
+            />
         </>
     );
 }
 
-function Stars(uniforms: uniformsProp): React.ReactElement {
+function Stars({uniforms}: UniformsData): React.ReactElement {
     return(
         <>
         </>
