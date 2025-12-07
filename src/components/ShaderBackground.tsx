@@ -1,35 +1,76 @@
 import React from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, ThreeElement, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
+import { AsciiRenderer } from '@react-three/drei';
 
-// --- 1. Vertex Shader ----
-const vertexShader = '';
+// --- A1. Vertex Shader ----
+const vertexShader_moon = '';
 
-// --- 2. Fragement Shader ---
-const fragmentShader = ''; //glsl code here
+// --- A2. Fragement Shader ---
+const fragmentShader_moon = ''; 
 
-function Moon(): React.ReactElement {
+// --- B1. Vertex Shader ----
+const vertexShader_stars = '';
+
+// --- B2. Fragement Shader ---
+const fragmentShader_stars = ''; 
+
+interface uniformsProp {
+    uniforms: {uTime: {value: number}, uResolution: {value: THREE.Vector2}}
+}
+
+function Moon(uniforms: uniformsProp): React.ReactElement {
     return(
         <>
         </>
     );
 }
 
-function Stars(): React.ReactElement {
+function Stars(uniforms: uniformsProp): React.ReactElement {
     return(
         <>
         </>
+    );
+}
+
+function Scene(): React.ReactElement {
+    const mesh = React.useRef(null);
+
+    const uniforms = React.useMemo(
+        () => ({
+            uTime: {value: 0},
+            uResolution: {value: new THREE.Vector2(window.innerWidth, window.innerHeight)}
+        }), 
+        []
+    )
+
+    useFrame((state) => {
+        if (mesh.current) {
+            uniforms.uTime.value = state.clock.elapsedTime;
+        }
+    });
+
+    return(
+    <mesh ref={mesh} position={[0, 0, 0]}>
+        <Moon uniforms={uniforms}/>
+        <Stars uniforms={uniforms}/>
+    </mesh>
     );
 }
 
 export default function ShaderBackground(): React.ReactElement {
-
-    useFrame(() => ('something'));
-
     return(
-    <Canvas>
-        <Moon />
-        <Stars />
-    </Canvas>
+    <div className='w-[100vw] h-[100vh]'>
+        <Canvas orthographic camera={{zoom: 100, position: [0, 0, 10]}}>
+            <Scene />
+
+            <AsciiRenderer 
+                fgColor="white" 
+                bgColor="black"
+                characters=" .:-=+*%#@"
+            />
+            <color attach="background" args={["black"]}/>
+        </Canvas>
+    </div>
     );
 }
