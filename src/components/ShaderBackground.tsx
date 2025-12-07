@@ -73,7 +73,7 @@ export default function ShaderBackground(): React.ReactElement {
             <AsciiRenderer 
                 fgColor="white" 
                 bgColor="black"
-                characters=" .:-=+*%#@"
+                characters=" .:+*#"
             />
             <color attach="background" args={["black"]}/>
         </Canvas>
