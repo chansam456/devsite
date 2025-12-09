@@ -48,7 +48,11 @@
     }
 
     .hotbar-name {
-        @apply flex-grow text-left mx-5 bg-transparent
+        @apply text-left mx-5 bg-transparent
+    }
+
+    .hotbar-fill {
+        @apply flex-grow
     }
 
     .links {
