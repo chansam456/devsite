@@ -28,11 +28,11 @@
 
 @layer components {
     .main {
-        @apply py-14 px-5 max-w-[900px] w-full overflow-y-auto flex-grow mx-auto
+        @apply py-16 px-5 max-w-[900px] w-full overflow-y-auto flex-grow mx-auto
     }
 
     .about {
-        @apply my-[60px]
+        @apply my-[60px] mb-[100px]
     }
 
     .cmd {
