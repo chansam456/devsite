@@ -1,7 +1,7 @@
 {
   "name": "samuel-chan-devsite",
   "version": "0.1.0",
-  "homepage": "https://chansam456.github.io/samuel-chan-devsite",
+  "homepage": "https://chansam456.github.io/devsite",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^10.7.7",
