@@ -7,7 +7,7 @@ React (Create React App)\
 Tailwind CSS (lots of pain, I know)
 
 ### Background Effects
-Three.js/React Three Fiber
+Three.js/React Three Fiber\
 OpenGL Shading Language (GLSL)
 
 ## Planned Integrations + Features (for fun)
