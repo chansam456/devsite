@@ -11,4 +11,13 @@ More Animations\
 Project Updates\
 Photography Branch Site\
 Color Groups\
-Accessibility Features\
+Accessibility Features
+
+## Inspiration
+
+This site is partially based off of Cixin Liu's novel, The Three Body Problem, which I strongly suggest reading.\
+I also recommend watching the show as well (Available on Netflix). 
+
+There's a couple easter eggs if you look hard enough. See if you can find them all!
+
+<img width="663" height="1000" alt="image" src="https://github.com/user-attachments/assets/b7c79204-5687-4450-bc0b-c0095178ae5a" />
