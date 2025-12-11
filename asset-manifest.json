@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/samuel-chan-devsite/static/css/main.20a238d0.css",
+    "main.js": "/samuel-chan-devsite/static/js/main.cee8c8d0.js",
+    "index.html": "/samuel-chan-devsite/index.html",
+    "main.20a238d0.css.map": "/samuel-chan-devsite/static/css/main.20a238d0.css.map",
+    "main.cee8c8d0.js.map": "/samuel-chan-devsite/static/js/main.cee8c8d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20a238d0.css",
+    "static/js/main.cee8c8d0.js"
+  ]
+}
