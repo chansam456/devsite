@@ -28,8 +28,8 @@ const useLocalStorage = (key: string, initialValue: boolean) => {
   return [storedValue, setValue];
 };
 
-const useSolarMode = () => {
-  const systemThemePreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const useLightMode = () => {
+  const systemThemePreference = !window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [enabled, setEnabled] = useLocalStorage('dark-theme', systemThemePreference);
   const isEnabled = enabled;
 
@@ -43,4 +43,4 @@ const useSolarMode = () => {
   return [enabled, setEnabled];
 };
 
-export default useSolarMode;
+export default useLightMode;
