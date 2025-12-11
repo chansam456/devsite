@@ -20,4 +20,7 @@ I also recommend watching the show as well (Available on Netflix).
 
 There's a couple easter eggs if you look hard enough. See if you can find them all!
 
-<img width="663" height="1000" alt="image" src="https://github.com/user-attachments/assets/b7c79204-5687-4450-bc0b-c0095178ae5a" />
+<img width="464" height="700" alt="image" src="https://github.com/user-attachments/assets/b7c79204-5687-4450-bc0b-c0095178ae5a" />
+
+<img width="473" height="700" alt="image" src="https://github.com/user-attachments/assets/2a287986-8280-4213-942c-468680427f32" />
+
