@@ -9,7 +9,7 @@ import Footbar from './components/footbar';
 function App(): React.ReactElement {
   return (
     <>
-      {/* <ShaderBackground /> */}
+      <ShaderBackground />
       
       <div className='relative z-10'>
         <Hotbar />
