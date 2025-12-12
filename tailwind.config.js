@@ -27,8 +27,7 @@ module.exports = {
       },
 
       fontFamily: {
-        main: ['"JetBrains Mono"', 'monospace'],
-        links: ['"Space Mono"', 'monospace'],
+        main: ['"JetBrains Mono"', 'monospace']
       },
     },
   },
