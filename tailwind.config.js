@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         normal: { //lunar
           background: '#0d1117',
+          backgroundshader: '#16202c',
           accentblue: '#58a6ff',
           accentorange: '#FD5C39',
           textlight: '#e8e6e3', 

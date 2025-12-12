@@ -18,7 +18,8 @@ const moonFragmentShader = `
 uniform sampler2D grainTex;
 uniform float uTime;
 uniform float uSeed;
-uniform vec4 uBack;
+uniform vec3 uBack;
+uniform vec3 uShaderBack;
 uniform float uStyle;
 uniform float uGrainScale; 
 uniform float uDistortion;
@@ -123,9 +124,9 @@ void main() {
   n = smoothstep(0.0, 1.0, n);
   
   // modify alpha values to debug
-  vec4 front = vec4(0.8, 0.8, 0.8, 1.0);
-  vec4 result = mix(uBack, front, n);
-
+  vec4 front = vec4(uShaderBack, 1.0);
+  vec4 back = vec4(uBack, 1.0);
+  vec4 result = mix(back, front, n);
   
   float dist = distance(vUv, vec2(0.5));
   float edgeMask = 1.0 - smoothstep(0.47, 0.5, dist);
@@ -146,11 +147,17 @@ function Scene() {
   // Setup texture wrapping
   grainTexture.wrapS = grainTexture.wrapT = THREE.RepeatWrapping
 
+    const palette = {
+        background: new THREE.Color('#0d1117'),
+        lightBackground: new THREE.Color('#909296')
+    };
+
   const uniforms = useMemo(
     () => ({
       uTime: { value: 0 },
       uSeed: { value: 0.6237470630176325 * 100 }, //Math.random() replaced for time being
-      uBack: { value: new THREE.Vector4(0.2, 0.2, 0.2, 0.2) }, 
+      uBack: { value: palette.background }, 
+      uShaderBack : { value: palette.lightBackground},
       grainTex: { value: grainTexture },
       uStyle: { value: 0.0 },
       uGrainScale: { value: 1.0 }, 
