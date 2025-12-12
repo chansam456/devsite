@@ -4,7 +4,8 @@
 
 ### Main Framework
 React (Create React App)\
-Tailwind CSS (lots of pain, I know)
+Tailwind CSS\
+GSAP
 
 ### Background Effects
 Three.js/React Three Fiber\
