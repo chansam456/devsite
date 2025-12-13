@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/devsite/static/css/main.20a238d0.css",
-    "main.js": "/devsite/static/js/main.26e10f63.js",
+    "main.css": "/devsite/static/css/main.2ef8af3c.css",
+    "main.js": "/devsite/static/js/main.4a7b1fde.js",
+    "static/media/grain.webp": "/devsite/static/media/grain.b21d19f5a8710624aa5d.webp",
     "index.html": "/devsite/index.html",
-    "main.20a238d0.css.map": "/devsite/static/css/main.20a238d0.css.map",
-    "main.26e10f63.js.map": "/devsite/static/js/main.26e10f63.js.map"
+    "main.2ef8af3c.css.map": "/devsite/static/css/main.2ef8af3c.css.map",
+    "main.4a7b1fde.js.map": "/devsite/static/js/main.4a7b1fde.js.map"
   },
   "entrypoints": [
-    "static/css/main.20a238d0.css",
-    "static/js/main.26e10f63.js"
+    "static/css/main.2ef8af3c.css",
+    "static/js/main.4a7b1fde.js"
   ]
 }
