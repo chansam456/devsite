@@ -124,12 +124,12 @@ void main() {
   n = smoothstep(0.0, 1.0, n);
   
   // modify alpha values to debug
-  vec4 front = vec4(uShaderBack, 1.0);
+  vec4 front = vec4(uShaderBack, 0.0);
   vec4 back = vec4(uBack, 1.0);
   vec4 result = mix(back, front, n);
   
   float dist = distance(vUv, vec2(0.5));
-  float edgeMask = 1.0 - smoothstep(0.47, 0.5, dist);
+  float edgeMask = 1.0 - smoothstep(0.498, 0.5, dist);
   result.a *= edgeMask;
   
   gl_FragColor = result;
@@ -147,17 +147,12 @@ function Scene() {
   // Setup texture wrapping
   grainTexture.wrapS = grainTexture.wrapT = THREE.RepeatWrapping
 
-    const palette = {
-        background: new THREE.Color('#0d1117'),
-        lightBackground: new THREE.Color('#909296')
-    };
-
   const uniforms = useMemo(
     () => ({
       uTime: { value: 0 },
       uSeed: { value: 0.6237470630176325 * 100 }, //Math.random() replaced for time being
-      uBack: { value: palette.background }, 
-      uShaderBack : { value: palette.lightBackground},
+      uBack: { value: new THREE.Color('#909296') },
+      uShaderBack: { value: new THREE.Color('#909296') }, 
       grainTex: { value: grainTexture },
       uStyle: { value: 0.0 },
       uGrainScale: { value: 1.0 }, 
@@ -174,7 +169,7 @@ function Scene() {
   })
 
   return (
-    <mesh ref={mesh} position={[0, -9.67, 0]}>
+    <mesh ref={mesh} position={[0, -9.9, 0]}>
       <circleGeometry args={[10, 196]} />
       <shaderMaterial
         fragmentShader={moonFragmentShader}
@@ -189,7 +184,7 @@ function Scene() {
 export default function ShaderBackground(): React.ReactElement {
   return (
     <div className='fixed w-[100vw] h-[100vh] bg-normal-background'>
-      <Canvas orthographic camera={{ position: [0, 0, 5], zoom: 175 }}>
+      <Canvas orthographic camera={{ position: [0, 0, 5], zoom: 300 }}>
         {/* FIXED: Suspense is required for useTexture */}
         <Suspense fallback={null}>
             <Scene />
