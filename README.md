@@ -1,30 +1,21 @@
-# Welcome to my Developer site!
+# Welcome to my developer site!
 
 ## Technologies
 
 ### Main Framework
-React (Create React App)\
+React + TypeScript\
 Tailwind CSS\
 GSAP
 
 ### Background Effects
-Three.js/React Three Fiber\
+Three.js via React Three Fiber\
 OpenGL Shading Language (GLSL)
-
-## Planned Integrations + Features (for fun)
-
-More Animations\
-Project Updates\
-Photography Branch Site\
-Color Groups\
-Accessibility Features
 
 ## Inspiration
 
 This site is partially based off of Cixin Liu's sci-fi supspense novel, The Three Body Problem, which I strongly suggest reading.\
+My current favorite sci-fi novel. This trilogy has a fascinating and devastating story about humanity's contact with an alien civilization who thinks, acts, and decides differently than us.\ 
 I also highly recommend watching the show (Available on Netflix). 
-
-There's a couple easter eggs if you look hard enough. See if you can find them all!
 
 <img width="332" height="500" alt="image" src="https://github.com/user-attachments/assets/b7c79204-5687-4450-bc0b-c0095178ae5a" />
 
