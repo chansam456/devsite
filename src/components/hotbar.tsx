@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hotbar(): React.ReactElement {
     return(
         <div className='hotbar'>
-            <a className='hotbar-name' href='https://google.com'>samchan@wallfacer:/thoughts-hidden-here/</a>
+            <a className='hotbar-name' href='https://www.instagram.com/chansam000/'>samchan@wallfacer:/thoughts-hidden-here/</a>
             <div className='hotbar-filler' />
             <div className='links'>
                 <a href='https://www.linkedin.com/in/samuelmchan/'>@linkedin</a>
