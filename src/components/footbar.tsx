@@ -8,7 +8,7 @@ export default function Footbar(): React.ReactElement {
         <div className='footbar'>
             <div className='footbar-options'>
                 <button onClick={() => setLightMode(false)}>LUNAR (DARK)</button>
-                <button onClick={() => setLightMode(true)}>SOLAR (LIGHT)</button>
+                {/*<button onClick={() => setLightMode(true)}>SOLAR (LIGHT)</button>*/}
             </div>
                 
             <div className='footbar-info'>
