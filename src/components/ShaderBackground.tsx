@@ -1,7 +1,7 @@
 import { useRef, useMemo, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
-import { useTexture } from '@react-three/drei'
+import { useTexture, Points, PointMaterial } from '@react-three/drei'
 import grainUrl from './assets/grain.webp' //fix this
 
 // --- Vertex Shader ---
@@ -136,10 +136,7 @@ void main() {
 }
 `
 
-// --- B1. Fragement Shader ---
-const fragmentShader_stars = ''; 
-
-function Scene() {
+function Moon() {
   const mesh = useRef<THREE.Mesh | null>(null)
   
   const [grainTexture] = useTexture([grainUrl])
@@ -169,7 +166,7 @@ function Scene() {
   })
 
   return (
-    <mesh ref={mesh} position={[0, -9.9, 0]}>
+    <mesh ref={mesh} position={[0, -9.975, 0]}>
       <circleGeometry args={[10, 196]} />
       <shaderMaterial
         fragmentShader={moonFragmentShader}
@@ -181,13 +178,51 @@ function Scene() {
   )
 }
 
+type StarFieldProps = {
+  count: number;
+  radius: number;
+  color: string;
+}
+
+function StarField( {count, radius, color}: StarFieldProps ): React.ReactElement {
+  // useMemo helps preserve memory by only generating random positions once
+  const positions = useMemo(() => {
+    const p = new Float32Array(count * 3)
+    for (let i = 0; i < count; i++) {
+      // finds random positions of points
+      let x = (Math.random() - 0.5) * 2 * radius
+      let y = (Math.random() - 0.5) * 2 * radius
+      let z = (Math.random() - 0.5) * 2 * radius
+      
+      p[i * 3] = x
+      p[i * 3 + 1] = y
+      p[i * 3 + 2] = z
+    }
+    return p
+  }, [count, radius])
+
+  return (
+    <Points positions={positions} stride={3} frustumCulled={false}>
+      <PointMaterial
+        transparent
+        color={color}
+        opacity={0.7}
+        size={2.5}                // individual star size modifier
+        sizeAttenuation={false} // size is the same regardless of distance
+        depthWrite={false}
+      />
+    </Points>
+  )
+}
+
 export default function ShaderBackground(): React.ReactElement {
   return (
     <div className='fixed w-[100vw] h-[100vh] bg-normal-background'>
       <Canvas orthographic camera={{ position: [0, 0, 5], zoom: 300 }}>
         {/* FIXED: Suspense is required for useTexture */}
-        <Suspense fallback={null}>
-            <Scene />
+        <Suspense fallback={<></>}>
+            <Moon />
+            <StarField count={3000} radius={15} color='#444848'/>
         </Suspense>
       </Canvas>
     </div>
