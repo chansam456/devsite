@@ -14,8 +14,14 @@ export default function CursorTooltipElem({ text, children, className }: Tooltip
     const lastCoords = React.useRef({ x: 0, y: 0 });
     const rafRef = React.useRef(0); // request animation frame (raf)
 
-    const updatePosition = () => { // update state constantly, but update element every frame
-        setCoords(lastCoords.current);
+    const tooltipRef = React.useRef<HTMLDivElement>(null);
+
+    const updatePosition = () => { 
+        // Directly update the DOM node's style for faster movement
+        if (tooltipRef.current) {
+            const { x, y } = lastCoords.current;
+            tooltipRef.current.style.transform = `translate(${x}px, ${y}px)`;
+        }
         rafRef.current = 0;
     }
 
@@ -40,7 +46,7 @@ export default function CursorTooltipElem({ text, children, className }: Tooltip
         onMouseMove={handleMouseMove}>
             {children}
             {isVisible && ReactDOM.createPortal(
-            <div className='tooltipInnerContainer fixed z-[1500] pointer-events-none w-fit' 
+            <div ref={tooltipRef} className='tooltipInnerContainer fixed z-[1500] pointer-events-none w-fit' 
             style={{
                 // positioning the tooltip @ cursor location
                 left: coords.x,
