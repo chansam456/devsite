@@ -1,12 +1,22 @@
 import React from 'react';
 import CursorTooltipElem from './CursorTooltipElem';
+import TypewriterEffect from 'typewriter-effect';
+
 
 export default function Main(): React.ReactElement {
     return (
         <div className='main'>
             <div className='about'>
                 <div className='cmd'>&gt; whoami</div>
-                <h1>Samuel Chan</h1>
+                <h1>
+                    <TypewriterEffect
+                    options={{
+                        strings: 'Samuel Chan',
+                        autoStart: true,
+                        cursorClassName: 'typewriter-cursor'
+                    }}
+                    />
+                </h1>
                 <div className='bio'>
                     // making ideas happen through intention, by design <br/>
                     // tea drinker, photographer, and math enjoyer

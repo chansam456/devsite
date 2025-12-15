@@ -8,8 +8,7 @@ export default function Contact(): React.ReactElement {
                     <div className='contact-title'>Contact&lt;?&gt;</div>
                     <div className='contact-desc'>
                         Samuel Chan<br/>
-                        samch000 [at] cs [dot] uw [dot] edu<br/>
-                        <a title="(Coming soon...)" href='https://github.com/chansam456'>@UWHonors Portfolio</a>
+                        samch000 [at] cs [dot] uw [dot] edu
                     </div>
                 </div>
 
@@ -17,7 +16,7 @@ export default function Contact(): React.ReactElement {
                     <div className='contact-title'>Mailing List</div>
                     <div className='contact-desc'>
                         Want to hear my semi-seasonal updates?<br/>
-                        <a href='https://google.com'>Join the mailing (wait)list here</a>
+                        <a href='mailto:samch000@uw.edu'>Join the mailing (wait)list here</a>
                     </div>
                 </div>
 
@@ -25,14 +24,14 @@ export default function Contact(): React.ReactElement {
                     <div className='contact-title'>Photography</div>
                     <div className='contact-desc'>
                         Dark Forest Photo<br/>
-                        <a href='https://google.com'>@darkforestphoto</a><br/>
+                        <a href='https://www.instagram.com/darkforestphoto/'>@darkforestphoto</a><br/>
                         Contact via instagram for inquiries & shoots
                     </div>
                 </div>
 
                 <div className='contact-entry'>
                     <div className='copyright-title'>
-                        a <a href='https://google.com'>@Sam Chan</a> production
+                        a <a href='https://www.github.com/chansam456'>Sam Chan</a> production
                         &copy; 2025
                     </div>
                     <div className='copyright-desc'>

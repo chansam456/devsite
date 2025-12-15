@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 @layer base {
     * {
         @apply p-0 m-0 border-normal-textdark dark:border-solar-textdark
@@ -140,6 +146,12 @@
 
     .copyright-desc {
         @apply w-[50%] text-normal-textdark dark:text-solar-textdark
+    }
+
+    .typewriter-cursor {
+        @apply font-thin;
+
+        animation: blink 1.5s step-end infinite;
     }
 }
 
